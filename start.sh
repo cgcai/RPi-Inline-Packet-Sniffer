@@ -14,8 +14,7 @@ brctl addif sniff0 eth1
 ifconfig eth0 0.0.0.0 promisc up
 ifconfig eth1 0.0.0.0 promisc up
 
-ifconfig sniff0 promisc up
-ifconfig sniff0 $eth_ip netmask $eth_netmask broadcast $eth_broadcast
+ifconfig sniff0 $eth_ip netmask $eth_netmask broadcast $eth_broadcast promisc up
 route add default gw $default_gw sniff0
 
-tcpdump -i eth1 -s 0 -C 100 -W 10 -w pcap
+tcpdump -i eth1 -C 100 -W 10 -w pcap

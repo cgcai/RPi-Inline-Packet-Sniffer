@@ -16,7 +16,7 @@ From a fresh install of Raspbian Wheezy, you need to install the following packa
 
 Currently, tcpdump is run with the following arguments:
 
-`tcpdump -i eth1 -s 0 -C 100 -W 10 -w pcap`
+`tcpdump -i eth1 -C 100 -W 10 -w pcap`
 
 To stop capturing, press `Ctrl + C`.
 
